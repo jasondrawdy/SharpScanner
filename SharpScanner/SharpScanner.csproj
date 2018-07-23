@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F790AFB8-2531-4ACD-BB05-620F51253399}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpScanner</RootNamespace>
+    <AssemblyName>Sharp Scanner</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>filled%28multi%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ObjectListView, Version=2.9.1.24069, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Backpack\Work\Code\C#\Krypta\Krypta\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="core\forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\classes\assembly\Extensions.cs" />
+    <Compile Include="core\forms\frmResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmResults.Designer.cs">
+      <DependentUpon>frmResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\forms\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\classes\controls\MonoFlat.cs" />
+    <Compile Include="core\classes\objects\Fetchers.cs" />
+    <Compile Include="core\forms\frmFetchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmFetchers.Designer.cs">
+      <DependentUpon>frmFetchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\forms\frmFavoriteName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmFavoriteName.Designer.cs">
+      <DependentUpon>frmFavoriteName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\forms\frmStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmStatistics.Designer.cs">
+      <DependentUpon>frmStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\classes\objects\FavoriteObject.cs" />
+    <Compile Include="core\forms\frmDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmDetails.Designer.cs">
+      <DependentUpon>frmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\forms\frmFavorites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmFavorites.Designer.cs">
+      <DependentUpon>frmFavorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\forms\frnEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frnEdit.Designer.cs">
+      <DependentUpon>frnEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\classes\assembly\EmbeddedAssembly.cs" />
+    <Compile Include="core\forms\frmUnhandledException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmUnhandledException.Designer.cs">
+      <DependentUpon>frmUnhandledException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="core\forms\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="core\forms\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="networking\extensions\NativeMethods.cs" />
+    <Compile Include="networking\helpers\ArpRequest.cs" />
+    <Compile Include="networking\helpers\ArpRequestResult.cs" />
+    <Compile Include="networking\helpers\Bits.cs" />
+    <Compile Include="networking\Scanner.cs" />
+    <Compile Include="networking\objects\EventHandlers.cs" />
+    <Compile Include="networking\objects\IPAddressRange.cs" />
+    <Compile Include="networking\objects\IPScanObject.cs" />
+    <Compile Include="networking\objects\PKScanObject.cs" />
+    <Compile Include="networking\objects\PKServiceObject.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="core\classes\objects\ScanObject.cs" />
+    <Compile Include="core\classes\management\SettingsManager.cs" />
+    <Compile Include="core\classes\objects\StatsObject.cs" />
+    <EmbeddedResource Include="core\forms\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmResults.resx">
+      <DependentUpon>frmResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmFetchers.resx">
+      <DependentUpon>frmFetchers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmFavoriteName.resx">
+      <DependentUpon>frmFavoriteName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmStatistics.resx">
+      <DependentUpon>frmStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmDetails.resx">
+      <DependentUpon>frmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmFavorites.resx">
+      <DependentUpon>frmFavorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frnEdit.resx">
+      <DependentUpon>frnEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="core\forms\frmUnhandledException.resx">
+      <DependentUpon>frmUnhandledException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copydetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exportscan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\importscan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rescanselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showdetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\traceroute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webbrowser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whois.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="filled%28multi%29.ico" />
+    <EmbeddedResource Include="ObjectListView.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
